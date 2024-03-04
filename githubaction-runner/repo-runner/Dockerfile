@@ -6,7 +6,7 @@ ARG TERRAFORM_VERSION="1.1.6"
 ARG TERRAFORM_LOCATION="/usr/bin/terraform"
 
 RUN apt-get update -y && apt-get upgrade -y && useradd -m ubuntu
-RUN apt-get install -y pass software-properties-common curl wget jq build-essential unzip libssl-dev libffi-dev python python-pip apt-utils \
+RUN apt-get install -y pass software-properties-common curl wget jq build-essential unzip libssl-dev libffi-dev python3 python3-pip apt-utils \
     && pip install yq docker ansible --user
 
 # Install Latest Git
