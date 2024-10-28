@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 MAINTAINER Uchechukwu Onyekwuluje <uionyekwuluje@gmail.com>
 
-ARG RUNNER_VERSION="2.314.1"
+ARG RUNNER_VERSION="2.320.0"
 
 RUN apt-get update -y && apt-get upgrade -y && useradd -m builder
 RUN apt-get install -y pass software-properties-common curl wget jq build-essential unzip libssl-dev libffi-dev python3 python3-pip apt-utils \

@@ -3,7 +3,7 @@ MAINTAINER Uchechukwu Onyekwuluje <uionyekwuluje@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ARG RUNNER_VERSION="2.319.1"
+ARG RUNNER_VERSION="2.320.0"
 #ARG TERRAFORM_VERSION="1.9.4"
 #ARG TERRAFORM_LOCATION="/usr/bin/terraform"
 
