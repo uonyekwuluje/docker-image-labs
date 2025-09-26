@@ -1,0 +1,39 @@
+# JAVA
+----------------------------------
+export JAVA_VERSION="24"
+export EXTRACT_FOLDER="/opt/jdk-24"
+sudo rm -rf ${EXTRACT_FOLDER}
+sudo mkdir ${EXTRACT_FOLDER}
+sudo wget https://download.oracle.com/java/${JAVA_VERSION}/latest/jdk-${JAVA_VERSION}_linux-x64_bin.tar.gz
+sudo tar -zxvf jdk-${JAVA_VERSION}_linux-x64_bin.tar.gz -C ${EXTRACT_FOLDER} --strip-components=1
+mv jdk-${JAVA_VERSION}_linux-x64_bin.tar.gz ~/dataDrive/my_BasePackages/
+${EXTRACT_FOLDER}/bin/java -version
+
+
+# MAVEN
+--------------------------------
+export MAVEN_VERSION="3.9.11"
+export EXTRACT_FOLDER="/opt/apache-maven"
+sudo rm -rf ${EXTRACT_FOLDER}
+sudo mkdir ${EXTRACT_FOLDER}
+wget https://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
+sudo tar -zxvf apache-maven-${MAVEN_VERSION}-bin.tar.gz -C ${EXTRACT_FOLDER} --strip-components=1
+mv apache-maven-${MAVEN_VERSION}-bin.tar.gz ~/dataDrive/my_BasePackages/
+${EXTRACT_FOLDER}/bin/mvn -version
+
+
+# PROFILE
+------------------------------
+export JAVA_HOME="/opt/jdk-24"
+export M2_HOME="/opt/apache-maven"
+export MAVEN_HOME="/opt/apache-maven"
+export PATH=$PATH:/opt/spring-boot/bin
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=${M2_HOME}/bin:${PATH}
+export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:$(npm bin -g)
+export PATH=$PATH:/opt/node/bin
+export PATH=$PATH:/opt/sonar-scanner/bin
+export PATH=$PATH:/opt/groovy/bin/
+export PATH="$PATH:$(npm prefix -g)/bin"
+export PATH="$PATH:~/.local/bin/"
